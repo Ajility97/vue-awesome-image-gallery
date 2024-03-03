@@ -2,7 +2,7 @@
 
 Vue.js 3 component that implements (what I think is) an awesome image gallery. When hovering over the active image, it is zoomed in.
 
-![Demo](demo.gif)
+![Demo](https://ajility.dev/github/vue-awesome-image-gallery/demo.gif)
 
 ## Usage
 Install package:
