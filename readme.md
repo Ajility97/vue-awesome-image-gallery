@@ -16,13 +16,13 @@ Use the component:
   <awesome-image-gallery
       :images="[
           {
-            url: 'https://cdn11.bigcommerce.com/s-j38el1cgyu/images/stencil/1280x1280/products/7462/24151/B-3793_0__72902.1689395806.png?c=1',
+            url: 'https://ajility.dev/github/vue-awesome-image-gallery/1.webp',
           },
           {
-            url: 'https://cdn11.bigcommerce.com/s-j38el1cgyu/images/stencil/1280x1280/products/7462/24152/B-3793_1__50815.1689395808.png?c=1',
+            url: 'https://ajility.dev/github/vue-awesome-image-gallery/2.webp',
           },
           {
-            url: 'https://cdn11.bigcommerce.com/s-j38el1cgyu/images/stencil/1280x1280/products/7462/24153/B-3793_2__17221.1689395810.png?c=1',
+            url: 'https://ajility.dev/github/vue-awesome-image-gallery/3.webp',
           }
       ]"
       :scale="0.9"
@@ -31,7 +31,7 @@ Use the component:
 
 <script setup>
 import AwesomeImageGallery from './AwesomeImageGallery.vue'
-<script
+</script>
   
 ```
 
