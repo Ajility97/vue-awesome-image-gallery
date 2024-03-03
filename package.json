@@ -1,6 +1,8 @@
 {
   "name": "vue-awesome-image-gallery",
-  "version": "1.0.3",
+  "author": "Sami Aji",
+  "version": "1.0.4",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -16,5 +18,30 @@
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
     "vue-tsc": "^1.8.27"
+  },
+  "keywords": [
+    "vue",
+    "vue image",
+    "vue image gallery",
+    "vue image viewer",
+    "vue image zoom",
+    "vue image hover on zoom",
+    "vue 3",
+    "vue 3 image",
+    "vue 3 image gallery",
+    "vue 3 image viewer",
+    "vue 3 image zoom",
+    "vue 3 image hover on zoom",
+    "image",
+    "gallery",
+    "component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Ajility97/vue-awesome-image-gallery.git"
+  },
+  "homepage": "https://github.com/Ajility97/vue-awesome-image-gallery/",
+  "bugs": {
+    "url": "https://github.com/Ajility97/vue-awesome-image-gallery/issues"
   }
 }
