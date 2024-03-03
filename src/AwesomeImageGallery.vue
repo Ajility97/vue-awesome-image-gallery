@@ -26,7 +26,7 @@
       class="image-thumbnail"
       :class="{'active-thumbnail': activeImageIdx === idx, 'inactive-thumbnail': activeImageIdx !== idx}"
       v-for="(image, idx) in images"
-      @click="activeImageIdx = idx"
+      @click="changeActiveImgIdx(idx)"
     >
       <img
         class="thumbnail"
@@ -49,7 +49,7 @@ const isZoomed: Ref<boolean> = ref(false)
 const scaleFactor: Ref<number> = ref(1)
 const resizeCheckInterval: Ref<number | undefined> = ref(undefined)
 
-const emit = defineEmits(["loaded", "resized"])
+const emit = defineEmits(["changed", "loaded", "resized"])
 const props = defineProps({
   alt: {
     type: String,
@@ -76,6 +76,14 @@ const props = defineProps({
 const activeImage = computed(() => {
   return props.images[activeImageIdx.value]
 })
+
+function changeActiveImgIdx(idx: number) {
+  activeImageIdx.value = idx
+  emit("changed", {
+    idx: idx,
+    image: activeImage.value
+  })
+}
 
 function pageOffset(el: any) {
   const rect = el.getBoundingClientRect(),
