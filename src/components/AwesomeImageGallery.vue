@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import {computed, onBeforeUnmount, onMounted, onUpdated, PropType, Ref, ref, watch} from "vue"
-import type { AwesomeImage } from "./types"
+import type { AwesomeImage } from "../types"
 
 const vueAwesomeImageContainer = ref(null)
 const activeImageIdx = ref(0)

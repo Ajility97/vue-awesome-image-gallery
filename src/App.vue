@@ -18,5 +18,5 @@
 </template>
 
 <script setup lang="ts">
-import AwesomeImageGallery from './AwesomeImageGallery.vue'
+import {AwesomeImageGallery} from "./components"
 </script>

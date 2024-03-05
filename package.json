@@ -1,26 +1,27 @@
 {
   "name": "vue-awesome-image-gallery",
   "author": "Sami Aji",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".": {
-      "import": "./dist/vue-awesome-image-gallery.js"
-    },
-    "./style.css": "./dist/style.css"
+    ".": "./dist/index.js",
+    "./styles.css": "./dist/style.css"
   },
+  "browser": {
+    "./styles.css": "./dist/style.css"
+  },
+  "types": "./dist/components/AwesomeImageGallery.vue.d.ts",
   "files": [
     "dist"
   ],
-  "main": "dist/index.ts",
-  "types": "dist/types.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "rollup-plugin-typescript2": "^0.36.0",
     "vue": "^3.4.19"
   },
   "devDependencies": {
