@@ -38,16 +38,17 @@
 </template>
 
 <script setup lang="ts">
-import {computed, onBeforeUnmount, onMounted, onUpdated, PropType, Ref, ref, watch} from "vue"
+import {computed, onBeforeUnmount, onMounted, onUpdated, ref, watch} from "vue"
 import type { AwesomeImage } from "../types"
+import type { PropType, Ref } from "vue"
 
 const vueAwesomeImageContainer = ref(null)
 const activeImageIdx = ref(0)
-const normalImg = ref(null)
-const zoomedImg = ref(null)
+const normalImg: Ref<HTMLImageElement | null> = ref(null)
+const zoomedImg: Ref<HTMLImageElement | null> = ref(null)
 const isZoomed: Ref<boolean> = ref(false)
 const scaleFactor: Ref<number> = ref(1)
-const resizeCheckInterval: Ref<number | undefined> = ref(undefined)
+const resizeCheckInterval: Ref<ReturnType<typeof setTimeout> | undefined> = ref(undefined)
 
 const emit = defineEmits(["changed", "loaded", "resized"])
 const props = defineProps({
@@ -128,7 +129,7 @@ function onMoveEvent(event: any) {
 
 function initEventLoaded() {
   // emit the “loaded” event if all images have been loaded
-  let promises = [zoomedImg.value, normalImg.value].map(function(image) {
+  let promises = [zoomedImg.value!, normalImg.value!].map(function(image) {
     return new Promise(function(resolve, reject) {
       image.addEventListener("load", resolve)
       image.addEventListener("error", reject)
@@ -140,7 +141,7 @@ function initEventLoaded() {
 }
 
 function initEventResized() {
-  let normal = normalImg.value
+  let normal: HTMLImageElement = normalImg.value!
   let previousWidth = normal.offsetWidth
   let previousHeight = normal.offsetHeight
   resizeCheckInterval.value = setInterval(function() {
@@ -159,16 +160,16 @@ function initEventResized() {
 
 watch(isZoomed, async () => {
   if (isZoomed.value) {
-    zoomedImg.value.style.visibility = 'visible'
-    if (props.hideActiveImageOnZoom) normalImg.value.style.visibility = 'hidden'
+    zoomedImg.value!.style.visibility = 'visible'
+    if (props.hideActiveImageOnZoom) normalImg.value!.style.visibility = 'hidden'
   } else {
-    zoomedImg.value.style.visibility = 'hidden'
-    if (props.hideActiveImageOnZoom) normalImg.value.style.visibility = 'visible'
+    zoomedImg.value!.style.visibility = 'hidden'
+    if (props.hideActiveImageOnZoom) normalImg.value!.style.visibility = 'visible'
   }
 })
 
 onMounted(() => {
-  if (props.scale && zoomedImg.value) {
+  if (props.scale && zoomedImg.value!) {
     scaleFactor.value = props.scale
     zoomedImg.value.style.transform = `scale(${scaleFactor.value})`
   }

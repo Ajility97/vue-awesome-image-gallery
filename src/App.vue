@@ -18,5 +18,5 @@
 </template>
 
 <script setup lang="ts">
-import {AwesomeImageGallery} from "./components"
+import { AwesomeImageGallery } from "./components"
 </script>
