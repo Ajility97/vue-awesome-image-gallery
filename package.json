@@ -1,17 +1,16 @@
 {
   "name": "vue-awesome-image-gallery",
   "author": "Sami Aji",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".": "./dist/index.js",
+    ".": "./dist/vue-awesome-image-gallery.js",
     "./styles.css": "./dist/style.css"
   },
   "browser": {
     "./styles.css": "./dist/style.css"
   },
-  "types": "./dist/components/AwesomeImageGallery.vue.d.ts",
   "files": [
     "dist"
   ],
