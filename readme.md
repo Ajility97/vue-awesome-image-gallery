@@ -13,24 +13,26 @@ npm i vue-awesome-image-gallery
 Use the component:
 ```js
 <template>
-  <awesome-image-gallery
-      :images="[
-          {
-            url: 'https://ajility.dev/github/vue-awesome-image-gallery/1.webp',
-          },
-          {
-            url: 'https://ajility.dev/github/vue-awesome-image-gallery/2.webp',
-          },
-          {
-            url: 'https://ajility.dev/github/vue-awesome-image-gallery/3.webp',
-          }
-      ]"
-      :scale="0.9"
-  />
+    <div style="width: 500px">
+        <awesome-image-gallery
+            :images="[
+                {
+                    url: 'https://ajility.dev/github/vue-awesome-image-gallery/1.webp',
+                },
+                {
+                    url: 'https://ajility.dev/github/vue-awesome-image-gallery/2.webp',
+                },
+                {
+                    url: 'https://ajility.dev/github/vue-awesome-image-gallery/3.webp',
+                }
+            ]"
+            :scale="0.9"
+        />
+    </div>
 </template>
 
 <script setup>
-import AwesomeImageGallery from './AwesomeImageGallery.vue'
+import { AwesomeImageGallery } from 'vue-awesome-image-gallery'
 </script>
   
 ```
