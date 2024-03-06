@@ -1,3 +1,4 @@
+import "./index.css";
 import { defineComponent as L, ref as r, computed as X, watch as Y, onMounted as F, onUpdated as U, onBeforeUnmount as G, openBlock as y, createElementBlock as I, Fragment as z, createElementVNode as v, renderList as M, normalizeClass as N } from "vue";
 const R = ["src", "alt"], T = ["src", "alt"], $ = { class: "image-thumbnails" }, q = ["onClick"], S = ["src", "alt"], V = /* @__PURE__ */ L({
   __name: "AwesomeImageGallery",
@@ -129,7 +130,7 @@ const R = ["src", "alt"], T = ["src", "alt"], $ = { class: "image-thumbnails" },
   for (const [u, i] of h)
     m[u] = i;
   return m;
-}, J = /* @__PURE__ */ j(V, [["__scopeId", "data-v-ab0a83e3"]]);
+}, K = /* @__PURE__ */ j(V, [["__scopeId", "data-v-ab0a83e3"]]);
 export {
-  J as AwesomeImageGallery
+  K as AwesomeImageGallery
 };
